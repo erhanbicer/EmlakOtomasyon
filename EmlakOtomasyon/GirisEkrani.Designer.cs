@@ -68,6 +68,7 @@ namespace EmlakOtomasyon
             // 
             this.tb_sifre.Location = new System.Drawing.Point(205, 110);
             this.tb_sifre.Name = "tb_sifre";
+            this.tb_sifre.PasswordChar = '*';
             this.tb_sifre.Size = new System.Drawing.Size(132, 23);
             this.tb_sifre.TabIndex = 2;
             // 

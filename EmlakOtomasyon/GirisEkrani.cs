@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using EmlakOtomasyon.helper;
+using EmlakOtomasyon.validation;
 
 namespace EmlakOtomasyon
 {
@@ -25,9 +22,41 @@ namespace EmlakOtomasyon
             var kullaniciAdi = tb_kullanciAdi.Text;
             var sifre = tb_sifre.Text;
 
-            
-            AnaMenu anaMenu = new AnaMenu();
-            anaMenu.ShowDialog();
+            if (Validation.kullaniciAdi(kullaniciAdi))
+            {
+                return;
+            }
+            else if (Validation.sifre(sifre))
+            {
+                return;
+            }
+
+            try
+            {
+                string command = "select * from kullanicilar where kullanici_adi='" + kullaniciAdi + "' and sifre='" + sifre + "'";
+                DBHelper db = DBHelper.getInstance();
+
+                bool isLogin = db.isLogin(command);
+
+                if (isLogin)
+                {
+                    MessageBox.Show("Giriş başarılı", "Giriş Başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı kullanıcı adı veya şifre", "Giriş Başarısız");
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show("Bağlantı problemi oluştu \n" + exp.Message);
+            }
+
+
+
+
+            //AnaMenu anaMenu = new AnaMenu();
+            //anaMenu.ShowDialog();
         }
     }
 }

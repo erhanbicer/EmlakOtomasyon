@@ -18,7 +18,7 @@ namespace EmlakOtomasyon.validation
 
         public static bool sifre(string sifre)
         {
-            bool isValid = sifre.Length < 3;
+            bool isValid = sifre.Length < 6;
             if (isValid)
             {
                 MessageBox.Show("Şifre 6 karakterden küçük olamaz", "Şifre");

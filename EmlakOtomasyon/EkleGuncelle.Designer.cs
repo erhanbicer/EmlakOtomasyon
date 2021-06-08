@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.roomTextbox = new System.Windows.Forms.TextBox();
-            this.loungeTextbox = new System.Windows.Forms.TextBox();
-            this.homeTypeCombobox = new System.Windows.Forms.ComboBox();
+            this.odaSayisiTextbox = new System.Windows.Forms.TextBox();
+            this.salonSayisiTextbox = new System.Windows.Forms.TextBox();
+            this.evTipiCombobox = new System.Windows.Forms.ComboBox();
             this.roomLabel = new System.Windows.Forms.Label();
             this.loungeLabel = new System.Windows.Forms.Label();
             this.heatingLabel = new System.Windows.Forms.Label();
             this.homeTypeLabel = new System.Windows.Forms.Label();
             this.homeStatusLabel = new System.Windows.Forms.Label();
-            this.priceTextbox = new System.Windows.Forms.TextBox();
+            this.fiyatTextbox = new System.Windows.Forms.TextBox();
             this.priceLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
-            this.homeStatusCombobox = new System.Windows.Forms.ComboBox();
-            this.heatingCombobox = new System.Windows.Forms.ComboBox();
+            this.evDurumuCombobox = new System.Windows.Forms.ComboBox();
+            this.isitmaTuruCombobox = new System.Windows.Forms.ComboBox();
             this.optionOneLabel = new System.Windows.Forms.Label();
             this.optionTwoLabel = new System.Windows.Forms.Label();
-            this.poolCheck = new System.Windows.Forms.CheckBox();
+            this.havuzCheck = new System.Windows.Forms.CheckBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.summeryTab = new System.Windows.Forms.TabPage();
-            this.viewCombobox = new System.Windows.Forms.ComboBox();
+            this.manzaraCombobox = new System.Windows.Forms.ComboBox();
             this.privateTab = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.gardenCheck = new System.Windows.Forms.CheckBox();
-            this.garageCheck = new System.Windows.Forms.CheckBox();
+            this.bahceCheck = new System.Windows.Forms.CheckBox();
+            this.garajCheck = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.apartmentTab = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
-            this.balconyCheck = new System.Windows.Forms.CheckBox();
-            this.floorTextbox = new System.Windows.Forms.TextBox();
+            this.balkonCheck = new System.Windows.Forms.CheckBox();
+            this.katTextbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tab.SuspendLayout();
             this.summeryTab.SuspendLayout();
@@ -63,43 +63,43 @@
             this.apartmentTab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // roomTextbox
+            // odaSayisiTextbox
             // 
-            this.roomTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.roomTextbox.Location = new System.Drawing.Point(231, 155);
-            this.roomTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.roomTextbox.MaxLength = 2;
-            this.roomTextbox.Multiline = true;
-            this.roomTextbox.Name = "roomTextbox";
-            this.roomTextbox.Size = new System.Drawing.Size(168, 27);
-            this.roomTextbox.TabIndex = 4;
-            this.roomTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
+            this.odaSayisiTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.odaSayisiTextbox.Location = new System.Drawing.Point(231, 155);
+            this.odaSayisiTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.odaSayisiTextbox.MaxLength = 2;
+            this.odaSayisiTextbox.Multiline = true;
+            this.odaSayisiTextbox.Name = "odaSayisiTextbox";
+            this.odaSayisiTextbox.Size = new System.Drawing.Size(168, 27);
+            this.odaSayisiTextbox.TabIndex = 4;
+            this.odaSayisiTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
             // 
-            // loungeTextbox
+            // salonSayisiTextbox
             // 
-            this.loungeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loungeTextbox.Location = new System.Drawing.Point(231, 194);
-            this.loungeTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.loungeTextbox.MaxLength = 2;
-            this.loungeTextbox.Multiline = true;
-            this.loungeTextbox.Name = "loungeTextbox";
-            this.loungeTextbox.Size = new System.Drawing.Size(168, 27);
-            this.loungeTextbox.TabIndex = 5;
-            this.loungeTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
+            this.salonSayisiTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.salonSayisiTextbox.Location = new System.Drawing.Point(231, 194);
+            this.salonSayisiTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.salonSayisiTextbox.MaxLength = 2;
+            this.salonSayisiTextbox.Multiline = true;
+            this.salonSayisiTextbox.Name = "salonSayisiTextbox";
+            this.salonSayisiTextbox.Size = new System.Drawing.Size(168, 27);
+            this.salonSayisiTextbox.TabIndex = 5;
+            this.salonSayisiTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
             // 
-            // homeTypeCombobox
+            // evTipiCombobox
             // 
-            this.homeTypeCombobox.FormattingEnabled = true;
-            this.homeTypeCombobox.Items.AddRange(new object[] {
+            this.evTipiCombobox.FormattingEnabled = true;
+            this.evTipiCombobox.Items.AddRange(new object[] {
             "Yazlik",
             "Apartman",
             "Mustakil"});
-            this.homeTypeCombobox.Location = new System.Drawing.Point(231, 80);
-            this.homeTypeCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.homeTypeCombobox.Name = "homeTypeCombobox";
-            this.homeTypeCombobox.Size = new System.Drawing.Size(168, 23);
-            this.homeTypeCombobox.TabIndex = 2;
-            this.homeTypeCombobox.SelectedIndexChanged += new System.EventHandler(this.homeTypeCombobox_SelectedIndexChanged);
+            this.evTipiCombobox.Location = new System.Drawing.Point(231, 80);
+            this.evTipiCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.evTipiCombobox.Name = "evTipiCombobox";
+            this.evTipiCombobox.Size = new System.Drawing.Size(168, 23);
+            this.evTipiCombobox.TabIndex = 2;
+            this.evTipiCombobox.SelectedIndexChanged += new System.EventHandler(this.homeTypeCombobox_SelectedIndexChanged);
             // 
             // roomLabel
             // 
@@ -161,17 +161,17 @@
             this.homeStatusLabel.Text = "Ev Durumu";
             this.homeStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // priceTextbox
+            // fiyatTextbox
             // 
-            this.priceTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceTextbox.Location = new System.Drawing.Point(231, 236);
-            this.priceTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.priceTextbox.MaxLength = 15;
-            this.priceTextbox.Multiline = true;
-            this.priceTextbox.Name = "priceTextbox";
-            this.priceTextbox.Size = new System.Drawing.Size(168, 27);
-            this.priceTextbox.TabIndex = 6;
-            this.priceTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
+            this.fiyatTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fiyatTextbox.Location = new System.Drawing.Point(231, 236);
+            this.fiyatTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.fiyatTextbox.MaxLength = 15;
+            this.fiyatTextbox.Multiline = true;
+            this.fiyatTextbox.Name = "fiyatTextbox";
+            this.fiyatTextbox.Size = new System.Drawing.Size(168, 27);
+            this.fiyatTextbox.TabIndex = 6;
+            this.fiyatTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
             // 
             // priceLabel
             // 
@@ -199,31 +199,31 @@
             this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // homeStatusCombobox
+            // evDurumuCombobox
             // 
-            this.homeStatusCombobox.FormattingEnabled = true;
-            this.homeStatusCombobox.Items.AddRange(new object[] {
+            this.evDurumuCombobox.FormattingEnabled = true;
+            this.evDurumuCombobox.Items.AddRange(new object[] {
             "Yazlik",
             "Apartman",
             "Mustakil"});
-            this.homeStatusCombobox.Location = new System.Drawing.Point(231, 40);
-            this.homeStatusCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.homeStatusCombobox.Name = "homeStatusCombobox";
-            this.homeStatusCombobox.Size = new System.Drawing.Size(168, 23);
-            this.homeStatusCombobox.TabIndex = 1;
+            this.evDurumuCombobox.Location = new System.Drawing.Point(231, 40);
+            this.evDurumuCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.evDurumuCombobox.Name = "evDurumuCombobox";
+            this.evDurumuCombobox.Size = new System.Drawing.Size(168, 23);
+            this.evDurumuCombobox.TabIndex = 1;
             // 
-            // heatingCombobox
+            // isitmaTuruCombobox
             // 
-            this.heatingCombobox.FormattingEnabled = true;
-            this.heatingCombobox.Items.AddRange(new object[] {
+            this.isitmaTuruCombobox.FormattingEnabled = true;
+            this.isitmaTuruCombobox.Items.AddRange(new object[] {
             "Kombi",
             "Soba",
             "Klima"});
-            this.heatingCombobox.Location = new System.Drawing.Point(231, 118);
-            this.heatingCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.heatingCombobox.Name = "heatingCombobox";
-            this.heatingCombobox.Size = new System.Drawing.Size(168, 23);
-            this.heatingCombobox.TabIndex = 3;
+            this.isitmaTuruCombobox.Location = new System.Drawing.Point(231, 118);
+            this.isitmaTuruCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.isitmaTuruCombobox.Name = "isitmaTuruCombobox";
+            this.isitmaTuruCombobox.Size = new System.Drawing.Size(168, 23);
+            this.isitmaTuruCombobox.TabIndex = 3;
             // 
             // optionOneLabel
             // 
@@ -249,16 +249,16 @@
             this.optionTwoLabel.Text = "Manzara";
             this.optionTwoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // poolCheck
+            // havuzCheck
             // 
-            this.poolCheck.AutoSize = true;
-            this.poolCheck.Location = new System.Drawing.Point(131, 56);
-            this.poolCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.poolCheck.Name = "poolCheck";
-            this.poolCheck.Size = new System.Drawing.Size(42, 19);
-            this.poolCheck.TabIndex = 12;
-            this.poolCheck.Text = "Var";
-            this.poolCheck.UseVisualStyleBackColor = true;
+            this.havuzCheck.AutoSize = true;
+            this.havuzCheck.Location = new System.Drawing.Point(131, 56);
+            this.havuzCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.havuzCheck.Name = "havuzCheck";
+            this.havuzCheck.Size = new System.Drawing.Size(42, 19);
+            this.havuzCheck.TabIndex = 12;
+            this.havuzCheck.Text = "Var";
+            this.havuzCheck.UseVisualStyleBackColor = true;
             // 
             // tab
             // 
@@ -276,9 +276,9 @@
             // summeryTab
             // 
             this.summeryTab.Controls.Add(this.optionOneLabel);
-            this.summeryTab.Controls.Add(this.poolCheck);
+            this.summeryTab.Controls.Add(this.havuzCheck);
             this.summeryTab.Controls.Add(this.optionTwoLabel);
-            this.summeryTab.Controls.Add(this.viewCombobox);
+            this.summeryTab.Controls.Add(this.manzaraCombobox);
             this.summeryTab.Location = new System.Drawing.Point(4, 24);
             this.summeryTab.Margin = new System.Windows.Forms.Padding(2);
             this.summeryTab.Name = "summeryTab";
@@ -288,24 +288,24 @@
             this.summeryTab.Text = "Yazlık";
             this.summeryTab.UseVisualStyleBackColor = true;
             // 
-            // viewCombobox
+            // manzaraCombobox
             // 
-            this.viewCombobox.FormattingEnabled = true;
-            this.viewCombobox.Items.AddRange(new object[] {
+            this.manzaraCombobox.FormattingEnabled = true;
+            this.manzaraCombobox.Items.AddRange(new object[] {
             "Yazlik",
             "Apartman",
             "Mustakil"});
-            this.viewCombobox.Location = new System.Drawing.Point(131, 95);
-            this.viewCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.viewCombobox.Name = "viewCombobox";
-            this.viewCombobox.Size = new System.Drawing.Size(107, 23);
-            this.viewCombobox.TabIndex = 5;
+            this.manzaraCombobox.Location = new System.Drawing.Point(131, 95);
+            this.manzaraCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.manzaraCombobox.Name = "manzaraCombobox";
+            this.manzaraCombobox.Size = new System.Drawing.Size(107, 23);
+            this.manzaraCombobox.TabIndex = 5;
             // 
             // privateTab
             // 
             this.privateTab.Controls.Add(this.label2);
-            this.privateTab.Controls.Add(this.gardenCheck);
-            this.privateTab.Controls.Add(this.garageCheck);
+            this.privateTab.Controls.Add(this.bahceCheck);
+            this.privateTab.Controls.Add(this.garajCheck);
             this.privateTab.Controls.Add(this.label3);
             this.privateTab.Location = new System.Drawing.Point(4, 24);
             this.privateTab.Margin = new System.Windows.Forms.Padding(2);
@@ -328,27 +328,27 @@
             this.label2.Text = "Garaj ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gardenCheck
+            // bahceCheck
             // 
-            this.gardenCheck.AutoSize = true;
-            this.gardenCheck.Location = new System.Drawing.Point(131, 97);
-            this.gardenCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.gardenCheck.Name = "gardenCheck";
-            this.gardenCheck.Size = new System.Drawing.Size(42, 19);
-            this.gardenCheck.TabIndex = 16;
-            this.gardenCheck.Text = "Var";
-            this.gardenCheck.UseVisualStyleBackColor = true;
+            this.bahceCheck.AutoSize = true;
+            this.bahceCheck.Location = new System.Drawing.Point(131, 97);
+            this.bahceCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.bahceCheck.Name = "bahceCheck";
+            this.bahceCheck.Size = new System.Drawing.Size(42, 19);
+            this.bahceCheck.TabIndex = 16;
+            this.bahceCheck.Text = "Var";
+            this.bahceCheck.UseVisualStyleBackColor = true;
             // 
-            // garageCheck
+            // garajCheck
             // 
-            this.garageCheck.AutoSize = true;
-            this.garageCheck.Location = new System.Drawing.Point(131, 56);
-            this.garageCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.garageCheck.Name = "garageCheck";
-            this.garageCheck.Size = new System.Drawing.Size(42, 19);
-            this.garageCheck.TabIndex = 16;
-            this.garageCheck.Text = "Var";
-            this.garageCheck.UseVisualStyleBackColor = true;
+            this.garajCheck.AutoSize = true;
+            this.garajCheck.Location = new System.Drawing.Point(131, 56);
+            this.garajCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.garajCheck.Name = "garajCheck";
+            this.garajCheck.Size = new System.Drawing.Size(42, 19);
+            this.garajCheck.TabIndex = 16;
+            this.garajCheck.Text = "Var";
+            this.garajCheck.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -365,8 +365,8 @@
             // apartmentTab
             // 
             this.apartmentTab.Controls.Add(this.label4);
-            this.apartmentTab.Controls.Add(this.balconyCheck);
-            this.apartmentTab.Controls.Add(this.floorTextbox);
+            this.apartmentTab.Controls.Add(this.balkonCheck);
+            this.apartmentTab.Controls.Add(this.katTextbox);
             this.apartmentTab.Controls.Add(this.label5);
             this.apartmentTab.Location = new System.Drawing.Point(4, 24);
             this.apartmentTab.Margin = new System.Windows.Forms.Padding(2);
@@ -389,28 +389,29 @@
             this.label4.Text = "Balkon";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // balconyCheck
+            // balkonCheck
             // 
-            this.balconyCheck.AutoSize = true;
-            this.balconyCheck.Location = new System.Drawing.Point(131, 56);
-            this.balconyCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.balconyCheck.Name = "balconyCheck";
-            this.balconyCheck.Size = new System.Drawing.Size(42, 19);
-            this.balconyCheck.TabIndex = 20;
-            this.balconyCheck.Text = "Var";
-            this.balconyCheck.UseVisualStyleBackColor = true;
+            this.balkonCheck.AutoSize = true;
+            this.balkonCheck.Location = new System.Drawing.Point(131, 56);
+            this.balkonCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.balkonCheck.Name = "balkonCheck";
+            this.balkonCheck.Size = new System.Drawing.Size(42, 19);
+            this.balkonCheck.TabIndex = 20;
+            this.balkonCheck.Text = "Var";
+            this.balkonCheck.UseVisualStyleBackColor = true;
             // 
-            // floorTextbox
+            // katTextbox
             // 
-            this.floorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.floorTextbox.Location = new System.Drawing.Point(131, 95);
-            this.floorTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.floorTextbox.MaxLength = 2;
-            this.floorTextbox.Multiline = true;
-            this.floorTextbox.Name = "floorTextbox";
-            this.floorTextbox.Size = new System.Drawing.Size(42, 27);
-            this.floorTextbox.TabIndex = 17;
-            this.floorTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
+            this.katTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.katTextbox.Location = new System.Drawing.Point(131, 95);
+            this.katTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.katTextbox.MaxLength = 2;
+            this.katTextbox.Multiline = true;
+            this.katTextbox.Name = "katTextbox";
+            this.katTextbox.PlaceholderText = "Kat Sayısı";
+            this.katTextbox.Size = new System.Drawing.Size(68, 27);
+            this.katTextbox.TabIndex = 17;
+            this.katTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntKeyPress);
             // 
             // label5
             // 
@@ -438,12 +439,12 @@
             this.Controls.Add(this.heatingLabel);
             this.Controls.Add(this.loungeLabel);
             this.Controls.Add(this.roomLabel);
-            this.Controls.Add(this.heatingCombobox);
-            this.Controls.Add(this.homeStatusCombobox);
-            this.Controls.Add(this.homeTypeCombobox);
-            this.Controls.Add(this.priceTextbox);
-            this.Controls.Add(this.loungeTextbox);
-            this.Controls.Add(this.roomTextbox);
+            this.Controls.Add(this.isitmaTuruCombobox);
+            this.Controls.Add(this.evDurumuCombobox);
+            this.Controls.Add(this.evTipiCombobox);
+            this.Controls.Add(this.fiyatTextbox);
+            this.Controls.Add(this.salonSayisiTextbox);
+            this.Controls.Add(this.odaSayisiTextbox);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EkleGuncelle";
             this.Text = "Emlak Otomasyonu";
@@ -462,35 +463,35 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox roomTextbox;
-        private System.Windows.Forms.TextBox loungeTextbox;
-        private System.Windows.Forms.ComboBox homeTypeCombobox;
+        private System.Windows.Forms.TextBox odaSayisiTextbox;
+        private System.Windows.Forms.TextBox salonSayisiTextbox;
+        private System.Windows.Forms.ComboBox evTipiCombobox;
         private System.Windows.Forms.Label roomLabel;
         private System.Windows.Forms.Label loungeLabel;
         private System.Windows.Forms.Label heatingLabel;
         private System.Windows.Forms.Label homeTypeLabel;
         private System.Windows.Forms.Label homeStatusLabel;
-        private System.Windows.Forms.TextBox priceTextbox;
+        private System.Windows.Forms.TextBox fiyatTextbox;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.ComboBox homeStatusCombobox;
-        private System.Windows.Forms.ComboBox heatingCombobox;
+        private System.Windows.Forms.ComboBox evDurumuCombobox;
+        private System.Windows.Forms.ComboBox isitmaTuruCombobox;
         private System.Windows.Forms.Label optionOneLabel;
         private System.Windows.Forms.Label optionTwoLabel;
-        private System.Windows.Forms.CheckBox poolCheck;
+        private System.Windows.Forms.CheckBox havuzCheck;
         private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage summeryTab;
         private System.Windows.Forms.TabPage privateTab;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox garageCheck;
+        private System.Windows.Forms.CheckBox garajCheck;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage apartmentTab;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox balconyCheck;
-        private System.Windows.Forms.TextBox floorTextbox;
+        private System.Windows.Forms.CheckBox balkonCheck;
+        private System.Windows.Forms.TextBox katTextbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox gardenCheck;
-        private System.Windows.Forms.ComboBox viewCombobox;
+        private System.Windows.Forms.CheckBox bahceCheck;
+        private System.Windows.Forms.ComboBox manzaraCombobox;
     }
 }
 

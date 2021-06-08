@@ -10,6 +10,8 @@ namespace EmlakOtomasyon
         public GirisEkrani()
         {
             InitializeComponent();
+            AnaMenu anaMenu = new AnaMenu();
+            anaMenu.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,6 +43,9 @@ namespace EmlakOtomasyon
                 if (isLogin)
                 {
                     MessageBox.Show("Giriş başarılı", "Giriş Başarılı");
+
+                    AnaMenu anaMenu = new AnaMenu();
+                    anaMenu.Show();
                 }
                 else
                 {

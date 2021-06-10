@@ -29,64 +29,135 @@ namespace EmlakOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
+            this.addButton = new System.Windows.Forms.Button();
+            this.hepsiniListeleButton = new System.Windows.Forms.Button();
+            this.temizleButton = new System.Windows.Forms.Button();
+            this.silButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tab = new System.Windows.Forms.TabControl();
             this.summeryTab = new System.Windows.Forms.TabPage();
             this.optionOneLabel = new System.Windows.Forms.Label();
-            this.poolCheck = new System.Windows.Forms.CheckBox();
+            this.havuzCheck = new System.Windows.Forms.CheckBox();
             this.optionTwoLabel = new System.Windows.Forms.Label();
-            this.viewCombobox = new System.Windows.Forms.ComboBox();
+            this.manzaraCombobox = new System.Windows.Forms.ComboBox();
             this.privateTab = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
-            this.gardenCheck = new System.Windows.Forms.CheckBox();
-            this.garageCheck = new System.Windows.Forms.CheckBox();
+            this.bahceCheck = new System.Windows.Forms.CheckBox();
+            this.garajCheck = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.apartmentTab = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
-            this.balconyCheck = new System.Windows.Forms.CheckBox();
-            this.floorTextbox = new System.Windows.Forms.TextBox();
+            this.balkonCheck = new System.Windows.Forms.CheckBox();
+            this.katTextbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.addButton = new System.Windows.Forms.Button();
             this.priceLabel = new System.Windows.Forms.Label();
             this.homeStatusLabel = new System.Windows.Forms.Label();
             this.homeTypeLabel = new System.Windows.Forms.Label();
             this.heatingLabel = new System.Windows.Forms.Label();
             this.loungeLabel = new System.Windows.Forms.Label();
             this.roomLabel = new System.Windows.Forms.Label();
-            this.heatingCombobox = new System.Windows.Forms.ComboBox();
-            this.homeStatusCombobox = new System.Windows.Forms.ComboBox();
-            this.homeTypeCombobox = new System.Windows.Forms.ComboBox();
-            this.priceTextbox = new System.Windows.Forms.TextBox();
-            this.loungeTextbox = new System.Windows.Forms.TextBox();
-            this.roomTextbox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.isitmaTuruCombobox = new System.Windows.Forms.ComboBox();
+            this.evDurumuCombobox = new System.Windows.Forms.ComboBox();
+            this.evTipiCombobox = new System.Windows.Forms.ComboBox();
+            this.fiyatTextbox = new System.Windows.Forms.TextBox();
+            this.salonSayisiTextbox = new System.Windows.Forms.TextBox();
+            this.odaSayisiTextbox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tab.SuspendLayout();
             this.summeryTab.SuspendLayout();
             this.privateTab.SuspendLayout();
             this.apartmentTab.SuspendLayout();
             this.SuspendLayout();
             // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.Color.IndianRed;
+            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addButton.ForeColor = System.Drawing.Color.Azure;
+            this.addButton.Location = new System.Drawing.Point(200, 287);
+            this.addButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(111, 42);
+            this.addButton.TabIndex = 26;
+            this.addButton.Text = "Filtrele";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.filtreleButton_Click);
+            // 
+            // hepsiniListeleButton
+            // 
+            this.hepsiniListeleButton.BackColor = System.Drawing.Color.IndianRed;
+            this.hepsiniListeleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hepsiniListeleButton.ForeColor = System.Drawing.Color.Azure;
+            this.hepsiniListeleButton.Location = new System.Drawing.Point(349, 287);
+            this.hepsiniListeleButton.Margin = new System.Windows.Forms.Padding(2);
+            this.hepsiniListeleButton.Name = "hepsiniListeleButton";
+            this.hepsiniListeleButton.Size = new System.Drawing.Size(111, 42);
+            this.hepsiniListeleButton.TabIndex = 26;
+            this.hepsiniListeleButton.Text = "Hepsini Listele";
+            this.hepsiniListeleButton.UseVisualStyleBackColor = false;
+            this.hepsiniListeleButton.Click += new System.EventHandler(this.hepsiniListeleButton_Click);
+            // 
+            // temizleButton
+            // 
+            this.temizleButton.BackColor = System.Drawing.Color.IndianRed;
+            this.temizleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.temizleButton.ForeColor = System.Drawing.Color.Azure;
+            this.temizleButton.Location = new System.Drawing.Point(496, 287);
+            this.temizleButton.Margin = new System.Windows.Forms.Padding(2);
+            this.temizleButton.Name = "temizleButton";
+            this.temizleButton.Size = new System.Drawing.Size(111, 42);
+            this.temizleButton.TabIndex = 26;
+            this.temizleButton.Text = "Temizle";
+            this.temizleButton.UseVisualStyleBackColor = false;
+            this.temizleButton.Click += new System.EventHandler(this.temizleButton_Click);
+            // 
+            // silButton
+            // 
+            this.silButton.BackColor = System.Drawing.Color.IndianRed;
+            this.silButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.silButton.ForeColor = System.Drawing.Color.Azure;
+            this.silButton.Location = new System.Drawing.Point(551, 608);
+            this.silButton.Margin = new System.Windows.Forms.Padding(2);
+            this.silButton.Name = "silButton";
+            this.silButton.Size = new System.Drawing.Size(111, 42);
+            this.silButton.TabIndex = 26;
+            this.silButton.Text = "Sil";
+            this.silButton.UseVisualStyleBackColor = false;
+            this.silButton.Click += new System.EventHandler(this.silButton_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(118, 348);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(544, 255);
+            this.dataGridView1.TabIndex = 29;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
             // tab
             // 
             this.tab.Controls.Add(this.summeryTab);
             this.tab.Controls.Add(this.privateTab);
             this.tab.Controls.Add(this.apartmentTab);
-            this.tab.Location = new System.Drawing.Point(401, 47);
+            this.tab.Location = new System.Drawing.Point(401, 41);
             this.tab.Margin = new System.Windows.Forms.Padding(2);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(261, 203);
-            this.tab.TabIndex = 27;
+            this.tab.TabIndex = 42;
             // 
             // summeryTab
             // 
             this.summeryTab.Controls.Add(this.optionOneLabel);
-            this.summeryTab.Controls.Add(this.poolCheck);
+            this.summeryTab.Controls.Add(this.havuzCheck);
             this.summeryTab.Controls.Add(this.optionTwoLabel);
-            this.summeryTab.Controls.Add(this.viewCombobox);
+            this.summeryTab.Controls.Add(this.manzaraCombobox);
             this.summeryTab.Location = new System.Drawing.Point(4, 24);
             this.summeryTab.Margin = new System.Windows.Forms.Padding(2);
             this.summeryTab.Name = "summeryTab";
@@ -108,16 +179,16 @@ namespace EmlakOtomasyon
             this.optionOneLabel.Text = "Havuz";
             this.optionOneLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // poolCheck
+            // havuzCheck
             // 
-            this.poolCheck.AutoSize = true;
-            this.poolCheck.Location = new System.Drawing.Point(133, 58);
-            this.poolCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.poolCheck.Name = "poolCheck";
-            this.poolCheck.Size = new System.Drawing.Size(42, 19);
-            this.poolCheck.TabIndex = 12;
-            this.poolCheck.Text = "Var";
-            this.poolCheck.UseVisualStyleBackColor = true;
+            this.havuzCheck.AutoSize = true;
+            this.havuzCheck.Location = new System.Drawing.Point(133, 58);
+            this.havuzCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.havuzCheck.Name = "havuzCheck";
+            this.havuzCheck.Size = new System.Drawing.Size(42, 19);
+            this.havuzCheck.TabIndex = 12;
+            this.havuzCheck.Text = "Var";
+            this.havuzCheck.UseVisualStyleBackColor = true;
             // 
             // optionTwoLabel
             // 
@@ -131,24 +202,24 @@ namespace EmlakOtomasyon
             this.optionTwoLabel.Text = "Manzara";
             this.optionTwoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // viewCombobox
+            // manzaraCombobox
             // 
-            this.viewCombobox.FormattingEnabled = true;
-            this.viewCombobox.Items.AddRange(new object[] {
+            this.manzaraCombobox.FormattingEnabled = true;
+            this.manzaraCombobox.Items.AddRange(new object[] {
             "Yazlik",
             "Apartman",
             "Mustakil"});
-            this.viewCombobox.Location = new System.Drawing.Point(131, 95);
-            this.viewCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.viewCombobox.Name = "viewCombobox";
-            this.viewCombobox.Size = new System.Drawing.Size(107, 23);
-            this.viewCombobox.TabIndex = 5;
+            this.manzaraCombobox.Location = new System.Drawing.Point(131, 95);
+            this.manzaraCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.manzaraCombobox.Name = "manzaraCombobox";
+            this.manzaraCombobox.Size = new System.Drawing.Size(107, 23);
+            this.manzaraCombobox.TabIndex = 5;
             // 
             // privateTab
             // 
             this.privateTab.Controls.Add(this.label2);
-            this.privateTab.Controls.Add(this.gardenCheck);
-            this.privateTab.Controls.Add(this.garageCheck);
+            this.privateTab.Controls.Add(this.bahceCheck);
+            this.privateTab.Controls.Add(this.garajCheck);
             this.privateTab.Controls.Add(this.label3);
             this.privateTab.Location = new System.Drawing.Point(4, 24);
             this.privateTab.Margin = new System.Windows.Forms.Padding(2);
@@ -171,27 +242,27 @@ namespace EmlakOtomasyon
             this.label2.Text = "Garaj ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gardenCheck
+            // bahceCheck
             // 
-            this.gardenCheck.AutoSize = true;
-            this.gardenCheck.Location = new System.Drawing.Point(133, 99);
-            this.gardenCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.gardenCheck.Name = "gardenCheck";
-            this.gardenCheck.Size = new System.Drawing.Size(42, 19);
-            this.gardenCheck.TabIndex = 16;
-            this.gardenCheck.Text = "Var";
-            this.gardenCheck.UseVisualStyleBackColor = true;
+            this.bahceCheck.AutoSize = true;
+            this.bahceCheck.Location = new System.Drawing.Point(133, 99);
+            this.bahceCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.bahceCheck.Name = "bahceCheck";
+            this.bahceCheck.Size = new System.Drawing.Size(42, 19);
+            this.bahceCheck.TabIndex = 16;
+            this.bahceCheck.Text = "Var";
+            this.bahceCheck.UseVisualStyleBackColor = true;
             // 
-            // garageCheck
+            // garajCheck
             // 
-            this.garageCheck.AutoSize = true;
-            this.garageCheck.Location = new System.Drawing.Point(133, 58);
-            this.garageCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.garageCheck.Name = "garageCheck";
-            this.garageCheck.Size = new System.Drawing.Size(42, 19);
-            this.garageCheck.TabIndex = 16;
-            this.garageCheck.Text = "Var";
-            this.garageCheck.UseVisualStyleBackColor = true;
+            this.garajCheck.AutoSize = true;
+            this.garajCheck.Location = new System.Drawing.Point(133, 58);
+            this.garajCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.garajCheck.Name = "garajCheck";
+            this.garajCheck.Size = new System.Drawing.Size(42, 19);
+            this.garajCheck.TabIndex = 16;
+            this.garajCheck.Text = "Var";
+            this.garajCheck.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -208,8 +279,8 @@ namespace EmlakOtomasyon
             // apartmentTab
             // 
             this.apartmentTab.Controls.Add(this.label4);
-            this.apartmentTab.Controls.Add(this.balconyCheck);
-            this.apartmentTab.Controls.Add(this.floorTextbox);
+            this.apartmentTab.Controls.Add(this.balkonCheck);
+            this.apartmentTab.Controls.Add(this.katTextbox);
             this.apartmentTab.Controls.Add(this.label5);
             this.apartmentTab.Location = new System.Drawing.Point(4, 24);
             this.apartmentTab.Margin = new System.Windows.Forms.Padding(2);
@@ -232,27 +303,28 @@ namespace EmlakOtomasyon
             this.label4.Text = "Balkon";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // balconyCheck
+            // balkonCheck
             // 
-            this.balconyCheck.AutoSize = true;
-            this.balconyCheck.Location = new System.Drawing.Point(133, 58);
-            this.balconyCheck.Margin = new System.Windows.Forms.Padding(2);
-            this.balconyCheck.Name = "balconyCheck";
-            this.balconyCheck.Size = new System.Drawing.Size(42, 19);
-            this.balconyCheck.TabIndex = 20;
-            this.balconyCheck.Text = "Var";
-            this.balconyCheck.UseVisualStyleBackColor = true;
+            this.balkonCheck.AutoSize = true;
+            this.balkonCheck.Location = new System.Drawing.Point(133, 58);
+            this.balkonCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.balkonCheck.Name = "balkonCheck";
+            this.balkonCheck.Size = new System.Drawing.Size(42, 19);
+            this.balkonCheck.TabIndex = 20;
+            this.balkonCheck.Text = "Var";
+            this.balkonCheck.UseVisualStyleBackColor = true;
             // 
-            // floorTextbox
+            // katTextbox
             // 
-            this.floorTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.floorTextbox.Location = new System.Drawing.Point(131, 95);
-            this.floorTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.floorTextbox.MaxLength = 2;
-            this.floorTextbox.Multiline = true;
-            this.floorTextbox.Name = "floorTextbox";
-            this.floorTextbox.Size = new System.Drawing.Size(42, 27);
-            this.floorTextbox.TabIndex = 17;
+            this.katTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.katTextbox.Location = new System.Drawing.Point(131, 95);
+            this.katTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.katTextbox.MaxLength = 2;
+            this.katTextbox.Multiline = true;
+            this.katTextbox.Name = "katTextbox";
+            this.katTextbox.PlaceholderText = "Kat Sayısı";
+            this.katTextbox.Size = new System.Drawing.Size(68, 27);
+            this.katTextbox.TabIndex = 17;
             // 
             // label5
             // 
@@ -266,28 +338,15 @@ namespace EmlakOtomasyon
             this.label5.Text = "Kat";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // addButton
-            // 
-            this.addButton.BackColor = System.Drawing.Color.IndianRed;
-            this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addButton.ForeColor = System.Drawing.Color.Azure;
-            this.addButton.Location = new System.Drawing.Point(200, 287);
-            this.addButton.Margin = new System.Windows.Forms.Padding(2);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(111, 42);
-            this.addButton.TabIndex = 26;
-            this.addButton.Text = "Filtrele";
-            this.addButton.UseVisualStyleBackColor = false;
-            // 
             // priceLabel
             // 
             this.priceLabel.BackColor = System.Drawing.Color.MintCream;
             this.priceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceLabel.Location = new System.Drawing.Point(114, 246);
+            this.priceLabel.Location = new System.Drawing.Point(114, 240);
             this.priceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.Size = new System.Drawing.Size(96, 28);
-            this.priceLabel.TabIndex = 16;
+            this.priceLabel.TabIndex = 32;
             this.priceLabel.Text = "Fiyat";
             this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -295,11 +354,11 @@ namespace EmlakOtomasyon
             // 
             this.homeStatusLabel.BackColor = System.Drawing.Color.MintCream;
             this.homeStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.homeStatusLabel.Location = new System.Drawing.Point(114, 46);
+            this.homeStatusLabel.Location = new System.Drawing.Point(114, 40);
             this.homeStatusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.homeStatusLabel.Name = "homeStatusLabel";
             this.homeStatusLabel.Size = new System.Drawing.Size(96, 28);
-            this.homeStatusLabel.TabIndex = 17;
+            this.homeStatusLabel.TabIndex = 33;
             this.homeStatusLabel.Text = "Ev Durumu";
             this.homeStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -307,11 +366,11 @@ namespace EmlakOtomasyon
             // 
             this.homeTypeLabel.BackColor = System.Drawing.Color.MintCream;
             this.homeTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.homeTypeLabel.Location = new System.Drawing.Point(114, 86);
+            this.homeTypeLabel.Location = new System.Drawing.Point(114, 80);
             this.homeTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.homeTypeLabel.Name = "homeTypeLabel";
             this.homeTypeLabel.Size = new System.Drawing.Size(96, 28);
-            this.homeTypeLabel.TabIndex = 18;
+            this.homeTypeLabel.TabIndex = 34;
             this.homeTypeLabel.Text = "Ev Tipi";
             this.homeTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -319,11 +378,11 @@ namespace EmlakOtomasyon
             // 
             this.heatingLabel.BackColor = System.Drawing.Color.MintCream;
             this.heatingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.heatingLabel.Location = new System.Drawing.Point(114, 124);
+            this.heatingLabel.Location = new System.Drawing.Point(114, 118);
             this.heatingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.heatingLabel.Name = "heatingLabel";
             this.heatingLabel.Size = new System.Drawing.Size(96, 28);
-            this.heatingLabel.TabIndex = 19;
+            this.heatingLabel.TabIndex = 35;
             this.heatingLabel.Text = "Isıtma Türü";
             this.heatingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -331,11 +390,11 @@ namespace EmlakOtomasyon
             // 
             this.loungeLabel.BackColor = System.Drawing.Color.MintCream;
             this.loungeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loungeLabel.Location = new System.Drawing.Point(114, 203);
+            this.loungeLabel.Location = new System.Drawing.Point(114, 197);
             this.loungeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loungeLabel.Name = "loungeLabel";
             this.loungeLabel.Size = new System.Drawing.Size(96, 28);
-            this.loungeLabel.TabIndex = 20;
+            this.loungeLabel.TabIndex = 36;
             this.loungeLabel.Text = "Salon Sayısı";
             this.loungeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -343,146 +402,86 @@ namespace EmlakOtomasyon
             // 
             this.roomLabel.BackColor = System.Drawing.Color.MintCream;
             this.roomLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.roomLabel.Location = new System.Drawing.Point(114, 164);
+            this.roomLabel.Location = new System.Drawing.Point(114, 158);
             this.roomLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.roomLabel.Name = "roomLabel";
             this.roomLabel.Size = new System.Drawing.Size(96, 28);
-            this.roomLabel.TabIndex = 21;
+            this.roomLabel.TabIndex = 37;
             this.roomLabel.Text = "Oda Sayısı";
             this.roomLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // heatingCombobox
+            // isitmaTuruCombobox
             // 
-            this.heatingCombobox.FormattingEnabled = true;
-            this.heatingCombobox.Items.AddRange(new object[] {
+            this.isitmaTuruCombobox.FormattingEnabled = true;
+            this.isitmaTuruCombobox.Items.AddRange(new object[] {
+            "Kombi",
+            "Soba",
+            "Klima"});
+            this.isitmaTuruCombobox.Location = new System.Drawing.Point(214, 122);
+            this.isitmaTuruCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.isitmaTuruCombobox.Name = "isitmaTuruCombobox";
+            this.isitmaTuruCombobox.Size = new System.Drawing.Size(168, 23);
+            this.isitmaTuruCombobox.TabIndex = 38;
+            // 
+            // evDurumuCombobox
+            // 
+            this.evDurumuCombobox.FormattingEnabled = true;
+            this.evDurumuCombobox.Items.AddRange(new object[] {
             "Yazlik",
             "Apartman",
             "Mustakil"});
-            this.heatingCombobox.Location = new System.Drawing.Point(214, 128);
-            this.heatingCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.heatingCombobox.Name = "heatingCombobox";
-            this.heatingCombobox.Size = new System.Drawing.Size(168, 23);
-            this.heatingCombobox.TabIndex = 22;
+            this.evDurumuCombobox.Location = new System.Drawing.Point(214, 44);
+            this.evDurumuCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.evDurumuCombobox.Name = "evDurumuCombobox";
+            this.evDurumuCombobox.Size = new System.Drawing.Size(168, 23);
+            this.evDurumuCombobox.TabIndex = 30;
             // 
-            // homeStatusCombobox
+            // evTipiCombobox
             // 
-            this.homeStatusCombobox.FormattingEnabled = true;
-            this.homeStatusCombobox.Items.AddRange(new object[] {
+            this.evTipiCombobox.FormattingEnabled = true;
+            this.evTipiCombobox.Items.AddRange(new object[] {
             "Yazlik",
             "Apartman",
             "Mustakil"});
-            this.homeStatusCombobox.Location = new System.Drawing.Point(214, 50);
-            this.homeStatusCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.homeStatusCombobox.Name = "homeStatusCombobox";
-            this.homeStatusCombobox.Size = new System.Drawing.Size(168, 23);
-            this.homeStatusCombobox.TabIndex = 14;
+            this.evTipiCombobox.Location = new System.Drawing.Point(214, 84);
+            this.evTipiCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.evTipiCombobox.Name = "evTipiCombobox";
+            this.evTipiCombobox.Size = new System.Drawing.Size(168, 23);
+            this.evTipiCombobox.TabIndex = 31;
+            this.evTipiCombobox.SelectedIndexChanged += new System.EventHandler(this.evTipiCombobox_SelectedIndexChanged);
             // 
-            // homeTypeCombobox
+            // fiyatTextbox
             // 
-            this.homeTypeCombobox.FormattingEnabled = true;
-            this.homeTypeCombobox.Items.AddRange(new object[] {
-            "Yazlik",
-            "Apartman",
-            "Mustakil"});
-            this.homeTypeCombobox.Location = new System.Drawing.Point(214, 90);
-            this.homeTypeCombobox.Margin = new System.Windows.Forms.Padding(2);
-            this.homeTypeCombobox.Name = "homeTypeCombobox";
-            this.homeTypeCombobox.Size = new System.Drawing.Size(168, 23);
-            this.homeTypeCombobox.TabIndex = 15;
+            this.fiyatTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.fiyatTextbox.Location = new System.Drawing.Point(214, 240);
+            this.fiyatTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.fiyatTextbox.MaxLength = 15;
+            this.fiyatTextbox.Multiline = true;
+            this.fiyatTextbox.Name = "fiyatTextbox";
+            this.fiyatTextbox.Size = new System.Drawing.Size(168, 27);
+            this.fiyatTextbox.TabIndex = 41;
             // 
-            // priceTextbox
+            // salonSayisiTextbox
             // 
-            this.priceTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.priceTextbox.Location = new System.Drawing.Point(214, 246);
-            this.priceTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.priceTextbox.MaxLength = 15;
-            this.priceTextbox.Multiline = true;
-            this.priceTextbox.Name = "priceTextbox";
-            this.priceTextbox.Size = new System.Drawing.Size(168, 27);
-            this.priceTextbox.TabIndex = 25;
+            this.salonSayisiTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.salonSayisiTextbox.Location = new System.Drawing.Point(214, 198);
+            this.salonSayisiTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.salonSayisiTextbox.MaxLength = 2;
+            this.salonSayisiTextbox.Multiline = true;
+            this.salonSayisiTextbox.Name = "salonSayisiTextbox";
+            this.salonSayisiTextbox.Size = new System.Drawing.Size(168, 27);
+            this.salonSayisiTextbox.TabIndex = 40;
             // 
-            // loungeTextbox
+            // odaSayisiTextbox
             // 
-            this.loungeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loungeTextbox.Location = new System.Drawing.Point(214, 204);
-            this.loungeTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.loungeTextbox.MaxLength = 2;
-            this.loungeTextbox.Multiline = true;
-            this.loungeTextbox.Name = "loungeTextbox";
-            this.loungeTextbox.Size = new System.Drawing.Size(168, 27);
-            this.loungeTextbox.TabIndex = 24;
-            // 
-            // roomTextbox
-            // 
-            this.roomTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.roomTextbox.Location = new System.Drawing.Point(214, 165);
-            this.roomTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.roomTextbox.MaxLength = 2;
-            this.roomTextbox.Multiline = true;
-            this.roomTextbox.Name = "roomTextbox";
-            this.roomTextbox.Size = new System.Drawing.Size(168, 27);
-            this.roomTextbox.TabIndex = 23;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Azure;
-            this.button1.Location = new System.Drawing.Point(349, 287);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 42);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Hepsini Listele";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.IndianRed;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Azure;
-            this.button2.Location = new System.Drawing.Point(496, 287);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 42);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Temizle";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(118, 348);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(544, 236);
-            this.listView1.TabIndex = 28;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Azure;
-            this.button3.Location = new System.Drawing.Point(551, 608);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 42);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Güncelle";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.IndianRed;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Azure;
-            this.button4.Location = new System.Drawing.Point(410, 608);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 42);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Sil";
-            this.button4.UseVisualStyleBackColor = false;
+            this.odaSayisiTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.odaSayisiTextbox.Location = new System.Drawing.Point(214, 159);
+            this.odaSayisiTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.odaSayisiTextbox.MaxLength = 2;
+            this.odaSayisiTextbox.Multiline = true;
+            this.odaSayisiTextbox.Name = "odaSayisiTextbox";
+            this.odaSayisiTextbox.Size = new System.Drawing.Size(168, 27);
+            this.odaSayisiTextbox.TabIndex = 39;
             // 
             // Listele
             // 
@@ -490,27 +489,27 @@ namespace EmlakOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 661);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.tab);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.addButton);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.homeStatusLabel);
             this.Controls.Add(this.homeTypeLabel);
             this.Controls.Add(this.heatingLabel);
             this.Controls.Add(this.loungeLabel);
             this.Controls.Add(this.roomLabel);
-            this.Controls.Add(this.heatingCombobox);
-            this.Controls.Add(this.homeStatusCombobox);
-            this.Controls.Add(this.homeTypeCombobox);
-            this.Controls.Add(this.priceTextbox);
-            this.Controls.Add(this.loungeTextbox);
-            this.Controls.Add(this.roomTextbox);
+            this.Controls.Add(this.isitmaTuruCombobox);
+            this.Controls.Add(this.evDurumuCombobox);
+            this.Controls.Add(this.evTipiCombobox);
+            this.Controls.Add(this.fiyatTextbox);
+            this.Controls.Add(this.salonSayisiTextbox);
+            this.Controls.Add(this.odaSayisiTextbox);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.temizleButton);
+            this.Controls.Add(this.silButton);
+            this.Controls.Add(this.hepsiniListeleButton);
+            this.Controls.Add(this.addButton);
             this.Name = "Listele";
             this.Text = "Listele";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tab.ResumeLayout(false);
             this.summeryTab.ResumeLayout(false);
             this.summeryTab.PerformLayout();
@@ -524,40 +523,38 @@ namespace EmlakOtomasyon
         }
 
         #endregion
-
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button hepsiniListeleButton;
+        private System.Windows.Forms.Button temizleButton;
+        private System.Windows.Forms.Button silButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage summeryTab;
         private System.Windows.Forms.Label optionOneLabel;
-        private System.Windows.Forms.CheckBox poolCheck;
+        private System.Windows.Forms.CheckBox havuzCheck;
         private System.Windows.Forms.Label optionTwoLabel;
-        private System.Windows.Forms.ComboBox viewCombobox;
+        private System.Windows.Forms.ComboBox manzaraCombobox;
         private System.Windows.Forms.TabPage privateTab;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox gardenCheck;
-        private System.Windows.Forms.CheckBox garageCheck;
+        private System.Windows.Forms.CheckBox bahceCheck;
+        private System.Windows.Forms.CheckBox garajCheck;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage apartmentTab;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox balconyCheck;
-        private System.Windows.Forms.TextBox floorTextbox;
+        private System.Windows.Forms.CheckBox balkonCheck;
+        private System.Windows.Forms.TextBox katTextbox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label homeStatusLabel;
         private System.Windows.Forms.Label homeTypeLabel;
         private System.Windows.Forms.Label heatingLabel;
         private System.Windows.Forms.Label loungeLabel;
         private System.Windows.Forms.Label roomLabel;
-        private System.Windows.Forms.ComboBox heatingCombobox;
-        private System.Windows.Forms.ComboBox homeStatusCombobox;
-        private System.Windows.Forms.ComboBox homeTypeCombobox;
-        private System.Windows.Forms.TextBox priceTextbox;
-        private System.Windows.Forms.TextBox loungeTextbox;
-        private System.Windows.Forms.TextBox roomTextbox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox isitmaTuruCombobox;
+        private System.Windows.Forms.ComboBox evDurumuCombobox;
+        private System.Windows.Forms.ComboBox evTipiCombobox;
+        private System.Windows.Forms.TextBox fiyatTextbox;
+        private System.Windows.Forms.TextBox salonSayisiTextbox;
+        private System.Windows.Forms.TextBox odaSayisiTextbox;
     }
 }

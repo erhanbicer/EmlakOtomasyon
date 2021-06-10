@@ -26,7 +26,7 @@ namespace EmlakOtomasyon
             Klima
         }
 
-        public enum HouseView
+        public enum Manzara
         {
             Deniz,
             Doğa,

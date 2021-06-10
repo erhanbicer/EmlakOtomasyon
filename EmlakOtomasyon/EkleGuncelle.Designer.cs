@@ -99,7 +99,7 @@
             this.evTipiCombobox.Name = "evTipiCombobox";
             this.evTipiCombobox.Size = new System.Drawing.Size(168, 23);
             this.evTipiCombobox.TabIndex = 2;
-            this.evTipiCombobox.SelectedIndexChanged += new System.EventHandler(this.homeTypeCombobox_SelectedIndexChanged);
+            this.evTipiCombobox.SelectedIndexChanged += new System.EventHandler(this.evTipiCombobox_SelectedIndexChanged);
             // 
             // roomLabel
             // 
@@ -271,7 +271,6 @@
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(261, 203);
             this.tab.TabIndex = 13;
-            this.tab.SelectedIndexChanged += new System.EventHandler(this.tab_SelectedIndexChanged);
             // 
             // summeryTab
             // 
@@ -448,7 +447,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EkleGuncelle";
             this.Text = "Emlak Otomasyonu";
-            this.Load += new System.EventHandler(this.MainPage_Load);
+            this.Load += new System.EventHandler(this.EkleGuncelle_Load);
             this.tab.ResumeLayout(false);
             this.summeryTab.ResumeLayout(false);
             this.summeryTab.PerformLayout();

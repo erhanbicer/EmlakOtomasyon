@@ -51,6 +51,7 @@ namespace EmlakOtomasyon
             this.btn_listele.TabIndex = 1;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // AnaMenu
             // 
@@ -62,6 +63,8 @@ namespace EmlakOtomasyon
             this.Controls.Add(this.btn_ekle);
             this.Name = "AnaMenu";
             this.Text = "AnaMenu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnaMenu_FormClosed);
+            this.Load += new System.EventHandler(this.AnaMenu_Load);
             this.ResumeLayout(false);
 
         }

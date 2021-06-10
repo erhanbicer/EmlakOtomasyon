@@ -20,5 +20,21 @@ namespace EmlakOtomasyon
             EkleGuncelle ekle = new EkleGuncelle();
             ekle.Show();
         }
+
+        private void btn_listele_Click(object sender, EventArgs e)
+        {
+            Listele listele = new Listele();
+            listele.Show();
+        }
+
+        private void AnaMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AnaMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

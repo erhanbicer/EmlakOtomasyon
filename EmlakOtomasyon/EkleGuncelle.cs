@@ -8,6 +8,7 @@ using System.Text;
 using static EmlakOtomasyon.Enums;
 using EmlakOtomasyon.helper;
 using System.Windows.Forms;
+using EmlakOtomasyon.model;
 
 namespace EmlakOtomasyon
 {
@@ -19,6 +20,15 @@ namespace EmlakOtomasyon
             init();
         }
 
+        int _id;
+        Listele listele;
+        public EkleGuncelle(int id, Listele listele)
+        {
+            _id = id;
+            this.listele = listele;
+            InitializeComponent();
+            init();
+        }
 
         private void init()
         {
@@ -39,7 +49,7 @@ namespace EmlakOtomasyon
             }
 
             manzaraCombobox.Items.Clear();
-            foreach (string name in Enum.GetNames(typeof(HouseView)))
+            foreach (string name in Enum.GetNames(typeof(Manzara)))
             {
                 manzaraCombobox.Items.Add(name);
             }
@@ -55,7 +65,8 @@ namespace EmlakOtomasyon
         {
         }
 
-        private void homeTypeCombobox_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void evTipiCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (evTipiCombobox.Text == "Yazlık")
             {
@@ -87,14 +98,25 @@ namespace EmlakOtomasyon
 
             try
             {
+                string query = "";
                 switch (evTipiCombobox.Text)
                 {
                     case "Yazlık":
-                        DBHelper.getInstance().executeNonQuery(string.Format(
-                        "INSERT INTO gayrimenkuller(" +
+
+                        if (_id > 0)
+                        {
+                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_havuz = '{6}', manzara = '{7}' WHERE Id = " + _id;
+                        }
+                        else
+                        {
+                            query = "INSERT INTO gayrimenkuller(" +
                         "durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_havuz, manzara" +
                         ") values " +
-                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')",
+                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')";
+
+                        }
+                        DBHelper.getInstance().executeNonQuery(string.Format(
+                        query,
                         evDurumuCombobox.Text,
                         evTipiCombobox.Text,
                         isitmaTuruCombobox.Text,
@@ -106,27 +128,45 @@ namespace EmlakOtomasyon
                         ));
                         break;
                     case "Müstakil":
-                        DBHelper.getInstance().executeNonQuery(string.Format(
-                        "insert into gayrimenkuller(" +
+                        if (_id > 0)
+                        {
+                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_garaj = '{6}', is_bahce = '{7}' WHERE Id = " + _id;
+                        }
+                        else
+                        {
+                            query = "insert into gayrimenkuller(" +
                         "durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_garaj, is_bahce" +
                         ") values " +
-                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')",
-                        evDurumuCombobox.Text,
-                        evTipiCombobox.Text,
-                        isitmaTuruCombobox.Text,
-                        Convert.ToInt32(odaSayisiTextbox.Text),
-                        Convert.ToInt32(salonSayisiTextbox.Text),
-                        fiyatTextbox.Text,
-                        Convert.ToInt32(garajCheck.Checked),
-                        Convert.ToInt32(bahceCheck.Checked)
-                        ));
+                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')";
+
+                        }
+                        DBHelper.getInstance().executeNonQuery(string.Format(
+                    query,
+                    evDurumuCombobox.Text,
+                    evTipiCombobox.Text,
+                    isitmaTuruCombobox.Text,
+                    Convert.ToInt32(odaSayisiTextbox.Text),
+                    Convert.ToInt32(salonSayisiTextbox.Text),
+                    fiyatTextbox.Text,
+                    Convert.ToInt32(garajCheck.Checked),
+                    Convert.ToInt32(bahceCheck.Checked)
+                    ));
                         break;
                     case "Apartman":
-                        DBHelper.getInstance().executeNonQuery(string.Format(
-                        "insert into gayrimenkuller(" +
+                        if (_id > 0)
+                        {
+                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_balkon = '{6}', kat = '{7}' WHERE Id = " + _id;
+                        }
+                        else
+                        {
+                            query = "insert into gayrimenkuller(" +
                         "durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_balkon, kat" +
                         ") values " +
-                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')",
+                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')";
+                        }
+
+                        DBHelper.getInstance().executeNonQuery(string.Format(
+                        query,
                         evDurumuCombobox.Text,
                         evTipiCombobox.Text,
                         isitmaTuruCombobox.Text,
@@ -141,23 +181,47 @@ namespace EmlakOtomasyon
                         break;
                 }
 
+                if (_id > 0)
+                {
+                    this.listele.listele();
+                }
                 MessageBox.Show("Başarılı");
                 this.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Bir sorun oluştu", "Opps!");
             }
         }
 
-        private void MainPage_Load(object sender, EventArgs e)
+        private void EkleGuncelle_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void tab_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            if (this._id > 0)
+            {
+                this.addButton.Text = "Güncelle";
+                var a = DBHelper.getInstance().executeSingleGayrimenkulRowReader("SELECT * FROM gayrimenkuller where Id = " + _id);
+                evDurumuCombobox.SelectedItem = a.Durumu.ToString();
+                evTipiCombobox.SelectedItem = a.Tipi.ToString();
+                isitmaTuruCombobox.SelectedItem = a.IsitmaTipi.ToString();
+                odaSayisiTextbox.Text = a.Oda.ToString();
+                salonSayisiTextbox.Text = a.Salon.ToString();
+                fiyatTextbox.Text = a.Fiyat;
+                switch (a.Tipi)
+                {
+                    case HomeTypeEnum.Apartman:
+                        katTextbox.Text = (a as ApartmanDairesi).Kat.ToString();
+                        balkonCheck.Checked = (a as ApartmanDairesi).Balkon;
+                        break;
+                    case HomeTypeEnum.Müstakil:
+                        garajCheck.Checked = (a as MustakilEv).Garaj;
+                        bahceCheck.Checked = (a as MustakilEv).Bahce;
+                        break;
+                    case HomeTypeEnum.Yazlık:
+                        manzaraCombobox.SelectedItem = (a as YazlikEv).Manzara.ToString();
+                        havuzCheck.Checked = (a as YazlikEv).Havuz;
+                        break;
+                }
+            }
         }
     }
 }

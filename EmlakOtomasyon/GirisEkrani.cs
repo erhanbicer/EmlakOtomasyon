@@ -9,9 +9,9 @@ namespace EmlakOtomasyon
     {
         public GirisEkrani()
         {
+            // Listele listele = new Listele();
+            //listele.ShowDialog();
             InitializeComponent();
-            AnaMenu anaMenu = new AnaMenu();
-            anaMenu.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,6 +44,7 @@ namespace EmlakOtomasyon
                 {
                     MessageBox.Show("Giriş başarılı", "Giriş Başarılı");
 
+                    this.Hide();
                     AnaMenu anaMenu = new AnaMenu();
                     anaMenu.Show();
                 }
@@ -57,11 +58,6 @@ namespace EmlakOtomasyon
                 MessageBox.Show("Bağlantı problemi oluştu \n" + exp.Message);
             }
 
-
-
-
-            //AnaMenu anaMenu = new AnaMenu();
-            //anaMenu.ShowDialog();
         }
     }
 }

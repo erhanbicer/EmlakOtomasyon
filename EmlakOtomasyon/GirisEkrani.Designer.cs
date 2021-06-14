@@ -51,6 +51,7 @@ namespace EmlakOtomasyon
             // 
             this.tb_kullanciAdi.Location = new System.Drawing.Point(205, 70);
             this.tb_kullanciAdi.Name = "tb_kullanciAdi";
+            this.tb_kullanciAdi.PlaceholderText = "admin";
             this.tb_kullanciAdi.Size = new System.Drawing.Size(132, 23);
             this.tb_kullanciAdi.TabIndex = 1;
             // 
@@ -69,6 +70,7 @@ namespace EmlakOtomasyon
             this.tb_sifre.Location = new System.Drawing.Point(205, 110);
             this.tb_sifre.Name = "tb_sifre";
             this.tb_sifre.PasswordChar = '*';
+            this.tb_sifre.PlaceholderText = "123456";
             this.tb_sifre.Size = new System.Drawing.Size(132, 23);
             this.tb_sifre.TabIndex = 2;
             // 

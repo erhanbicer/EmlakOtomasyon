@@ -9,14 +9,13 @@ namespace EmlakOtomasyon
     {
         public GirisEkrani()
         {
-            // Listele listele = new Listele();
-            //listele.ShowDialog();
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            tb_kullanciAdi.Text = "admin";
+            tb_sifre.Text = "123456";
         }
 
         private void btn_girisYap_Click(object sender, EventArgs e)

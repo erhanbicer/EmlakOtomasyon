@@ -83,7 +83,6 @@ namespace EmlakOtomasyon.helper
                             int kat = reader.GetInt32("kat");
                             bool balkon = reader.GetBoolean("is_balkon");
                             emlak = new ApartmanDairesi(oda, salon, isitma_turu, durumu, Id, fiyat, tipi, kat, balkon);
-
                             break;
                         case Enums.HomeTypeEnum.Müstakil:
                             bool garaj = reader.GetBoolean("is_garaj");
@@ -91,10 +90,9 @@ namespace EmlakOtomasyon.helper
                             emlak = new MustakilEv(oda, salon, isitma_turu, durumu, Id, fiyat, tipi, bahce, garaj);
                             break;
                         case Enums.HomeTypeEnum.Yazlık:
-                            bool havuz = reader.GetBoolean("is_havuz");
                             Enums.Manzara manzara;
-
                             Enum.TryParse(reader.GetString("manzara"), out manzara);
+                            bool havuz = reader.GetBoolean("is_havuz");
                             emlak = new YazlikEv(oda, salon, isitma_turu, durumu, Id, fiyat, tipi, havuz, manzara);
                             break;
                     }

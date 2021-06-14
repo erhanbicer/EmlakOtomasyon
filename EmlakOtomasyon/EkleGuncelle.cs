@@ -103,79 +103,80 @@ namespace EmlakOtomasyon
                 {
                     case "Yazlık":
 
+                        if(manzaraCombobox.Text == "")
+                        {
+                            MessageBox.Show("Lütfen Manzara alanını boş bırakmayınız.");
+                            return;
+                        }
+
                         if (_id > 0)
                         {
-                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_havuz = '{6}', manzara = '{7}' WHERE Id = " + _id;
+                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_havuz = '{6}', manzara = '{7}', is_garaj = '{8}', is_bahce = '{9}', is_balkon = '{10}', kat = '{11}' WHERE Id = " + _id;
                         }
                         else
                         {
-                            query = "INSERT INTO gayrimenkuller(" +
-                        "durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_havuz, manzara" +
-                        ") values " +
-                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')";
-
+                            query = "INSERT INTO gayrimenkuller(durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_havuz, manzara, is_garaj, is_bahce, is_balkon, kat) values('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}')";
                         }
+
                         DBHelper.getInstance().executeNonQuery(string.Format(
-                        query,
-                        evDurumuCombobox.Text,
-                        evTipiCombobox.Text,
-                        isitmaTuruCombobox.Text,
-                        Convert.ToInt32(odaSayisiTextbox.Text),
-                        Convert.ToInt32(salonSayisiTextbox.Text),
-                        fiyatTextbox.Text,
-                        Convert.ToInt32(havuzCheck.Checked),
-                        manzaraCombobox.Text
-                        ));
+                                                query,
+                                                evDurumuCombobox.Text,
+                                                evTipiCombobox.Text,
+                                                isitmaTuruCombobox.Text,
+                                                Convert.ToInt32(odaSayisiTextbox.Text),
+                                                Convert.ToInt32(salonSayisiTextbox.Text),
+                                                fiyatTextbox.Text,
+                                                Convert.ToInt32(havuzCheck.Checked),
+                                                manzaraCombobox.Text,
+                                                null, null, null, null
+                                                ));
                         break;
                     case "Müstakil":
+
                         if (_id > 0)
                         {
-                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_garaj = '{6}', is_bahce = '{7}' WHERE Id = " + _id;
+                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_garaj = '{6}', is_bahce = '{7}', is_havuz = '{8}', manzara = '{9}', is_balkon = '{10}', kat = '{11}' WHERE Id = " + _id;
                         }
                         else
                         {
-                            query = "insert into gayrimenkuller(" +
-                        "durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_garaj, is_bahce" +
-                        ") values " +
-                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')";
-
+                            query = "insert into gayrimenkuller(durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_garaj, is_bahce, is_havuz, manzara, is_balkon, kat) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}','{9}','{10}','{11}')";
                         }
                         DBHelper.getInstance().executeNonQuery(string.Format(
-                    query,
-                    evDurumuCombobox.Text,
-                    evTipiCombobox.Text,
-                    isitmaTuruCombobox.Text,
-                    Convert.ToInt32(odaSayisiTextbox.Text),
-                    Convert.ToInt32(salonSayisiTextbox.Text),
-                    fiyatTextbox.Text,
-                    Convert.ToInt32(garajCheck.Checked),
-                    Convert.ToInt32(bahceCheck.Checked)
-                    ));
+                                                query,
+                                                evDurumuCombobox.Text,
+                                                evTipiCombobox.Text,
+                                                isitmaTuruCombobox.Text,
+                                                Convert.ToInt32(odaSayisiTextbox.Text),
+                                                Convert.ToInt32(salonSayisiTextbox.Text),
+                                                fiyatTextbox.Text,
+                                                Convert.ToInt32(garajCheck.Checked),
+                                                Convert.ToInt32(bahceCheck.Checked),
+                                                null, null, null, null
+                                                ));
                         break;
                     case "Apartman":
+
                         if (_id > 0)
                         {
-                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_balkon = '{6}', kat = '{7}' WHERE Id = " + _id;
+                            query = "UPDATE gayrimenkuller SET durumu ='{0}', tipi='{1}', isitma_turu = '{2}', oda_sayisi ='{3}', salon_sayisi='{4}', fiyat = '{5}', is_balkon = '{6}', kat = '{7}', is_garaj = '{8}', is_bahce = '{9}', is_havuz = '{10}', manzara = '{11}' WHERE Id = " + _id;
                         }
                         else
                         {
-                            query = "insert into gayrimenkuller(" +
-                        "durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_balkon, kat" +
-                        ") values " +
-                        "('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')";
+                            query = "insert into gayrimenkuller(durumu, tipi, isitma_turu, oda_sayisi, salon_sayisi, fiyat, is_balkon, kat,is_garaj, is_bahce, is_havuz, manzara) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}')";
                         }
 
                         DBHelper.getInstance().executeNonQuery(string.Format(
-                        query,
-                        evDurumuCombobox.Text,
-                        evTipiCombobox.Text,
-                        isitmaTuruCombobox.Text,
-                        Convert.ToInt32(odaSayisiTextbox.Text),
-                        Convert.ToInt32(salonSayisiTextbox.Text),
-                        fiyatTextbox.Text,
-                        Convert.ToInt32(balkonCheck.Checked),
-                        katTextbox.Text
-                        ));
+                                                query,
+                                                evDurumuCombobox.Text,
+                                                evTipiCombobox.Text,
+                                                isitmaTuruCombobox.Text,
+                                                Convert.ToInt32(odaSayisiTextbox.Text),
+                                                Convert.ToInt32(salonSayisiTextbox.Text),
+                                                fiyatTextbox.Text,
+                                                Convert.ToInt32(balkonCheck.Checked),
+                                                katTextbox.Text,
+                                                null, null, null, null
+                                                ));
                         break;
                     default:
                         break;

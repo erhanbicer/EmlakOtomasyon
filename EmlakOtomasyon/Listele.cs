@@ -12,6 +12,7 @@ namespace EmlakOtomasyon
 {
     public partial class Listele : Form
     {
+        string SHORT_GAYRIMENKUL = "Id as 'Ilan No', durumu as 'Ev Durumu', tipi as 'Evin Tipi', isitma_turu as 'Isıtma Türü', oda_sayisi as 'Oda Sayısı', salon_sayisi as 'Salon Sayısı', fiyat as Fiyat, is_havuz as 'Havuzlu', manzara as Manzara, is_garaj as 'Garaj', is_bahce as 'Bahçe', is_balkon as Balkonlu, kat as Kat";
         public Listele()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace EmlakOtomasyon
 
         public void listele()
         {
-            dataGridView1.DataSource = DBHelper.getInstance().executeDataTable("select * from gayrimenkuller");
+            dataGridView1.DataSource = DBHelper.getInstance().executeDataTable("select " + SHORT_GAYRIMENKUL + " from gayrimenkuller");
         }
 
         private void filtreleButton_Click(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace EmlakOtomasyon
                     case "Yazlık":
                         if (manzaraCombobox.SelectedIndex >= 0)
                         {
-                            queryBuilder += string.Format(" AND kat = '{0}'", manzaraCombobox.SelectedItem.ToString());
+                            queryBuilder += string.Format(" AND manzara = '{0}'", manzaraCombobox.SelectedItem.ToString());
                         }
 
                         if (havuzCheck.Checked)
@@ -111,12 +112,12 @@ namespace EmlakOtomasyon
 
             if (odaSayisiTextbox.Text.ToString() != "")
             {
-                queryBuilder += string.Format(" AND oda = {0}", Convert.ToInt32(odaSayisiTextbox.Text.ToString()));
+                queryBuilder += string.Format(" AND oda_sayisi = {0}", Convert.ToInt32(odaSayisiTextbox.Text.ToString()));
             }
 
             if (salonSayisiTextbox.Text.ToString() != "")
             {
-                queryBuilder += string.Format(" AND salon = {0}", Convert.ToInt32(salonSayisiTextbox.Text.ToString()));
+                queryBuilder += string.Format(" AND salon_sayisi = {0}", Convert.ToInt32(salonSayisiTextbox.Text.ToString()));
             }
 
             if (fiyatTextbox.Text.ToString() != "")
@@ -124,7 +125,7 @@ namespace EmlakOtomasyon
                 queryBuilder += string.Format(" AND fiyat = '{0}'", fiyatTextbox.Text.ToString());
             }
 
-            dataGridView1.DataSource = DBHelper.getInstance().executeDataTable(string.Format("select * from gayrimenkuller where 1=1 {0}", queryBuilder));
+            dataGridView1.DataSource = DBHelper.getInstance().executeDataTable(string.Format("select "+ SHORT_GAYRIMENKUL +" from gayrimenkuller where 1=1 {0}", queryBuilder));
         }
 
         private void hepsiniListeleButton_Click(object sender, EventArgs e)
@@ -191,7 +192,6 @@ namespace EmlakOtomasyon
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
             var id = (int) dataGridView1.Rows[e.RowIndex].Cells[0].Value;
             EkleGuncelle frm = new EkleGuncelle(id, this);
             frm.ShowDialog();

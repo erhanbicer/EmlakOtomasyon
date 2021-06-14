@@ -12,13 +12,7 @@ namespace EmlakOtomasyon.model
     {
         public int Oda { get; set; }
         public int Salon { get; set; }
-        public string OdaSayisi
-        {
-            get
-            {
-                return Oda.ToString() + "+" + Salon;
-            }
-        }
+    
         public TypeOfHeating IsitmaTipi { get; set; }
         public HomeTypeEnum Tipi { get; set; }
         public HomeStatus Durumu { get; set; }
